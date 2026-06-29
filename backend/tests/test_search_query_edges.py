@@ -1,4 +1,4 @@
-﻿"""Regression tests for search query edge cases."""
+"""Regression tests for search query edge cases."""
 
 from fastapi.testclient import TestClient
 

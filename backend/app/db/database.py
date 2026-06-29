@@ -55,7 +55,12 @@ def register_sqlite_unicode_lower(sqlalchemy_engine: Engine) -> None:
 
 register_sqlite_unicode_lower(engine)
 
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(
+    bind=engine,
+    autoflush=False,
+    autocommit=False,
+    expire_on_commit=False,
+)
 
 
 class Base(DeclarativeBase):
