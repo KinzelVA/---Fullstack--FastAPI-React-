@@ -1,4 +1,4 @@
-﻿import base64
+import base64
 import hashlib
 import secrets
 from datetime import UTC, datetime, timedelta

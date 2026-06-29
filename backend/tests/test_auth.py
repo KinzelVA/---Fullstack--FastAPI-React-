@@ -1,4 +1,4 @@
-﻿from fastapi.testclient import TestClient
+from fastapi.testclient import TestClient
 
 
 def test_admin_login_success(client: TestClient) -> None:

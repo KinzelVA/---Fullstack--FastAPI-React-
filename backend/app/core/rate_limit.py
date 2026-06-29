@@ -1,4 +1,4 @@
-﻿from collections import defaultdict, deque
+from collections import defaultdict, deque
 from collections.abc import Awaitable, Callable
 from time import monotonic
 

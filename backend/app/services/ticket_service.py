@@ -1,4 +1,4 @@
-﻿import math
+import math
 
 from fastapi import HTTPException, status
 from sqlalchemy import asc, case, desc, func, or_, select

@@ -1,4 +1,4 @@
-﻿from datetime import UTC, datetime
+from datetime import UTC, datetime
 from enum import Enum
 
 from sqlalchemy import DateTime

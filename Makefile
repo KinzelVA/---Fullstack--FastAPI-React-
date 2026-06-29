@@ -1,4 +1,4 @@
-﻿.PHONY: backend-dev frontend-dev backend-test frontend-build docker-build docker-up docker-down lint
+.PHONY: backend-dev frontend-dev backend-test frontend-build docker-build docker-up docker-down lint
 
 backend-dev:
 python -m uvicorn backend.app.main:app --reload

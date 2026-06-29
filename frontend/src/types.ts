@@ -1,4 +1,4 @@
-﻿export type TicketStatus = 'new' | 'in_progress' | 'done';
+export type TicketStatus = 'new' | 'in_progress' | 'done';
 export type TicketPriority = 'low' | 'normal' | 'high';
 
 export type SortBy = 'created_at' | 'priority';

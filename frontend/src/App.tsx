@@ -1,4 +1,4 @@
-﻿import type { FormEvent } from 'react';
+import type { FormEvent } from 'react';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import './App.css';
 import {
