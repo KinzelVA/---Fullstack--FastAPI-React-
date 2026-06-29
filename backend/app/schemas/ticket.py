@@ -10,7 +10,7 @@ class TicketCreateRequest(BaseModel):
     title: str = Field(
         min_length=3,
         max_length=120,
-        examples=["ННе работает принтер в бухгалтерии"],
+        examples=["Не работает принтер в бухгалтерии"],
     )
     description: str | None = Field(
         default=None,
@@ -25,7 +25,7 @@ class TicketCreateRequest(BaseModel):
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
-                "title": "ННе работает принтер в бухгалтерии",
+                "title": "Не работает принтер в бухгалтерии",
                 "description": "Принтер HP LaserJet не печатает документы после замены картриджа.",
                 "priority": "normal",
             }
@@ -47,7 +47,7 @@ class TicketStatusUpdateRequest(BaseModel):
 
 class TicketResponse(BaseModel):
     id: int = Field(examples=[1])
-    title: str = Field(examples=["ННе работает принтер в бухгалтерии"])
+    title: str = Field(examples=["Не работает принтер в бухгалтерии"])
     description: str | None = Field(
         default=None,
         examples=["Принтер HP LaserJet не печатает документы после замены картриджа."],
@@ -73,7 +73,7 @@ class PaginatedTicketsResponse(BaseModel):
                 "items": [
                     {
                         "id": 1,
-                        "title": "ННе работает принтер в бухгалтерии",
+                        "title": "Не работает принтер в бухгалтерии",
                         "description": "Принтер HP LaserJet не печатает документы после замены картриджа.",
                         "status": "new",
                         "priority": "normal",
