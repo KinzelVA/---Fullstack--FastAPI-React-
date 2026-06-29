@@ -10,12 +10,12 @@ class TicketCreateRequest(BaseModel):
     title: str = Field(
         min_length=3,
         max_length=120,
-        examples=["е работает принтер в бухгалтерии"],
+        examples=["ННе работает принтер в бухгалтерии"],
     )
     description: str | None = Field(
         default=None,
         max_length=1000,
-        examples=["ринтер HP LaserJet не печатает документы после замены картриджа."],
+        examples=["Принтер HP LaserJet не печатает документы после замены картриджа."],
     )
     priority: TicketPriority = Field(
         default=TicketPriority.NORMAL,
@@ -25,8 +25,8 @@ class TicketCreateRequest(BaseModel):
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
-                "title": "е работает принтер в бухгалтерии",
-                "description": "ринтер HP LaserJet не печатает документы после замены картриджа.",
+                "title": "ННе работает принтер в бухгалтерии",
+                "description": "Принтер HP LaserJet не печатает документы после замены картриджа.",
                 "priority": "normal",
             }
         }
@@ -47,10 +47,10 @@ class TicketStatusUpdateRequest(BaseModel):
 
 class TicketResponse(BaseModel):
     id: int = Field(examples=[1])
-    title: str = Field(examples=["е работает принтер в бухгалтерии"])
+    title: str = Field(examples=["ННе работает принтер в бухгалтерии"])
     description: str | None = Field(
         default=None,
-        examples=["ринтер HP LaserJet не печатает документы после замены картриджа."],
+        examples=["Принтер HP LaserJet не печатает документы после замены картриджа."],
     )
     status: TicketStatus = Field(examples=[TicketStatus.NEW])
     priority: TicketPriority = Field(examples=[TicketPriority.NORMAL])
@@ -73,8 +73,8 @@ class PaginatedTicketsResponse(BaseModel):
                 "items": [
                     {
                         "id": 1,
-                        "title": "е работает принтер в бухгалтерии",
-                        "description": "ринтер HP LaserJet не печатает документы после замены картриджа.",
+                        "title": "ННе работает принтер в бухгалтерии",
+                        "description": "Принтер HP LaserJet не печатает документы после замены картриджа.",
                         "status": "new",
                         "priority": "normal",
                         "created_at": "2026-06-26T10:00:00Z",

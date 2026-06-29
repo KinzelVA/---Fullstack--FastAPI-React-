@@ -1,4 +1,4 @@
-from typing import Annotated
+﻿from typing import Annotated
 
 from fastapi import APIRouter, Depends, Query, Response, status
 from sqlalchemy.orm import Session
@@ -79,7 +79,7 @@ def list_tickets_endpoint(
     ] = None,
     search: Annotated[
         str | None,
-        Query(min_length=1, max_length=120, description="Search in title and description"),
+        Query(max_length=120, description="Search in title and description"),
     ] = None,
     sort_by: Annotated[
         SortBy,

@@ -107,8 +107,8 @@ def test_list_tickets_with_backend_search_filter_sort_and_pagination(
 def test_unicode_search_works_on_backend(client: TestClient) -> None:
     create_ticket(
         client,
-        title="е работает принтер",
-        description="ринтер не печатает после замены картриджа",
+        title="Не работает принтер",
+        description="Принтер не печатает после замены картриджа",
         priority="high",
     )
 
@@ -125,7 +125,7 @@ def test_unicode_search_works_on_backend(client: TestClient) -> None:
     data = response.json()
 
     assert data["total"] == 1
-    assert data["items"][0]["title"] == "е работает принтер"
+    assert data["items"][0]["title"] == "Не работает принтер"
 
 
 def test_update_ticket_status_success(client: TestClient) -> None:

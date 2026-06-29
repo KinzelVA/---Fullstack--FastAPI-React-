@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session, sessionmaker
 from sqlalchemy.pool import StaticPool
 
 from backend.app import models as _models  # noqa: F401
-from backend.app.db.database import Base, get_db
+from backend.app.db.database import Base, get_db, register_sqlite_unicode_lower
 from backend.app.db.seed import seed_admin_user
 from backend.app.main import app
 
@@ -14,6 +14,8 @@ test_engine = create_engine(
     connect_args={"check_same_thread": False},
     poolclass=StaticPool,
 )
+
+register_sqlite_unicode_lower(test_engine)
 
 TestingSessionLocal = sessionmaker(
     bind=test_engine,
